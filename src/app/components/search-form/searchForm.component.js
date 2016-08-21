@@ -6,11 +6,13 @@
     };
 
     /** @ngInject */
-    function SearchFormController($rootScope, $scope) {
-        var vm       = this;
-        vm.tags      = $rootScope.tags;
+    function SearchFormController($rootScope, $timeout) {
+        var vm = this;
         vm.tagsModel = {};
 
+        $timeout(function () {
+            vm.tags = $rootScope.tags;
+        }, 0)
     }
 
     angular.module('stackOverflowApp')
