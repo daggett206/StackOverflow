@@ -1,0 +1,5 @@
+form.search-form(name="searchForm", novalidate, ng-submit="$ctrl.submit()")
+    fieldset.search-form__fieldset
+        so-search-input
+    fieldset.search-form__fieldset.search-form__fieldset--for-tag
+        so-tag(tags-model="$ctrl.tagsModel", name="{{::tag.name}}" ng-repeat="tag in ::$ctrl.tags track by $index")

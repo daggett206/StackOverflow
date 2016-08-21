@@ -3,10 +3,10 @@
 
   angular
     .module('stackOverflowApp')
-    .controller('MainController', MainController);
+    .controller('HomeController', HomeController);
 
   /** @ngInject */
-  function MainController() {
+  function HomeController() {
     // var vm = this;
     //
     // vm.awesomeThings = [];

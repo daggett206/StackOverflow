@@ -1,0 +1,34 @@
+/* Do not remove the comments below. It's the markers used by wiredep to inject
+   sass dependencies when defined in the bower.json of your dependencies */
+// bower:scss
+// endbower
+
+
+.container {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 5%;
+
+  @include adaptive(md) {
+    padding: 0 2%;
+  }
+
+  @include adaptive(ipad) {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  @include adaptive(lg) {
+    width: 960px;
+  }
+
+  @include adaptive(desk) {
+    width: 1280px;
+  }
+}
+
+
+/* Do not remove the comments below. It's the markers used by gulp-inject to inject
+   all your sass files automatically */
+// injector
+// endinjector

@@ -1,0 +1,9 @@
+.search-box
+    .search-box__overlay(ng-click="$ctrl.isOpen = false")
+    .search-box__content.search-popup
+        header.search-popup__header
+            .search-popup__logo.logo
+            span.search-popup__close.icon-cancel(ng-click="$ctrl.isOpen = false")
+        .search-popup__content.search-content
+            h3.search-content__title Ask your question over here.
+            so-search-form
