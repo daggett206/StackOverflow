@@ -2,5 +2,19 @@
 
   &__container {
     padding-top: 45px;
+    padding-bottom: 45px;
+    max-width: 1024px;
+    margin: 0 auto;
   }
+
+  &__header {
+    text-align: center;
+    padding-top: 50px;
+  }
+
+  &__header-title {
+    font-size: 1.6em;
+  }
+
+
 }
