@@ -7,8 +7,7 @@
 
   /** @ngInject */
   function HomeController() {
-    // var vm = this;
-    //
+
     // vm.awesomeThings = [];
     // vm.classAnimation = '';
     // vm.creationDate = 1471780249291;
