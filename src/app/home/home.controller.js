@@ -3,12 +3,11 @@
 
   angular
     .module('stackOverflowApp')
-    .controller('MainController', MainController);
+    .controller('HomeController', HomeController);
 
   /** @ngInject */
-  function MainController() {
-    // var vm = this;
-    //
+  function HomeController() {
+
     // vm.awesomeThings = [];
     // vm.classAnimation = '';
     // vm.creationDate = 1471780249291;

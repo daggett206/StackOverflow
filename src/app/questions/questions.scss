@@ -1,0 +1,25 @@
+.questions {
+
+  &__container {
+    padding-top: 95px;
+    padding-bottom: 45px;
+
+    @include adaptive(ipad) {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -100%);
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+  }
+
+  &__error {
+    font-size: 1.2em;
+    text-align: center;
+  }
+
+  &__error-link {
+    color: $action-color;
+  }
+}

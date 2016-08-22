@@ -1,11 +1,11 @@
-(function() {
-  'use strict';
+(function () {
+    'use strict';
 
-  angular
-    .module('stackOverflowApp')
-    .run(runBlock);
+    angular
+        .module('stackOverflowApp')
+        .run(runBlock);
 
-  /** @ngInject */
-  function runBlock() {}
+    /** @ngInject */
+    function runBlock() {}
 
 })();

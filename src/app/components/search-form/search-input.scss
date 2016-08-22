@@ -1,0 +1,25 @@
+.search-input {
+  position: relative;
+  margin: 20px 0;
+
+  &__input {
+    width: 75%;
+    display: inline-block;
+    border: 1px solid darken($bg-color, 20%);
+    padding: .4em .6em;
+    box-sizing: border-box;
+    overflow:hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  &__submit {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: $action-color;
+    color: white;
+    padding: .46em .6em;
+    width: 24%;
+  }
+}

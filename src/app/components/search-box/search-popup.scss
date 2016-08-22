@@ -1,0 +1,40 @@
+.search-popup {
+  border-radius: 5px;
+  overflow: hidden;
+  z-index: 100;
+  width: 90%;
+  background: white;
+  margin: 10px auto;
+  max-width: 700px;
+  box-shadow: 0 3px 5px -1px rgba(0,0,0,.2),0 5px 8px 0 rgba(0,0,0,.14),0 1px 14px 0 rgba(0,0,0,.12);
+
+  &__header {
+    background: $bg-color;
+    padding: .4em .6em;
+    text-align: left;
+    display: none;
+
+    @include adaptive(md) {
+      display: block;
+      position: relative;
+    }
+  }
+
+  &__close {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color:darken($bg-color, 30%);
+  }
+
+  &__logo {
+    width: 150px;
+    height: 50px;
+  }
+
+  &__content {
+    padding: .4em .6em;
+  }
+}

@@ -1,7 +1,9 @@
 {
   "name": "stackOverflow",
   "version": "0.0.0",
-  "dependencies": {},
+  "dependencies": {
+    "gulp-svg-sprites": "^4.0.2"
+  },
   "scripts": {
     "test": "gulp test"
   },

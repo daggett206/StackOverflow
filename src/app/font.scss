@@ -1,0 +1,41 @@
+/* Do not remove the comments below. It's the markers used by wiredep to inject
+   sass dependencies when defined in the bower.json of your dependencies */
+// bower:scss
+// endbower
+
+@font-face {
+  font-family: "RobotoCondensedRegular";
+  src: url("../assets/fonts/RobotoCondensedRegular/RobotoCondensedRegular.eot");
+  src: url("../assets/fonts/RobotoCondensedRegular/RobotoCondensedRegular.eot?#iefix") format("embedded-opentype"),
+  url("../assets/fonts/RobotoCondensedRegular/RobotoCondensedRegular.woff") format("woff"),
+  url("../assets/fonts/RobotoCondensedRegular/RobotoCondensedRegular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'fontello';
+  src: url('../assets/fonts/Icons/fontello.eot?54747244');
+  src: url('../assets/fonts/Icons/fontello.eot?54747244#iefix') format('embedded-opentype'),
+  url('../assets/fonts/Icons/fontello.woff2?54747244') format('woff2'),
+  url('../assets/fonts/Icons/fontello.woff?54747244') format('woff'),
+  url('../assets/fonts/Icons/fontello.ttf?54747244') format('truetype'),
+  url('../assets/fonts/Icons/fontello.svg?54747244#fontello') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.icon-search:before {
+  font-family: $icons;
+  content: '\e800';
+}
+
+.icon-cancel:before {
+  font-family: $icons;
+  content: '\e801';
+}
+
+/* Do not remove the comments below. It's the markers used by gulp-inject to inject
+   all your sass files automatically */
+// injector
+// endinjector

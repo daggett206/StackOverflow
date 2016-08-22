@@ -1,0 +1,22 @@
+.header {
+  display: block;
+  width: 100%;
+  background: $bg-color;
+  position: fixed;
+  z-index: 1000;
+
+  &__link {
+    display: inline-block;
+    width: 150px;
+    height: 40px;
+  }
+
+  &__search {
+    display: inline-block;
+    cursor: pointer;
+    float: right;
+    font-size: 1.4em;
+    line-height: 2em;
+    padding: 0 0.6em;
+  }
+}
