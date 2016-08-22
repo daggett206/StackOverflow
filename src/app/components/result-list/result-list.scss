@@ -1,0 +1,9 @@
+.result-list {
+
+  &__item {
+    
+    &:nth-child(odd) {
+      background: $bg-color;
+    }
+  }
+}

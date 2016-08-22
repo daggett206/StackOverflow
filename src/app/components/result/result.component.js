@@ -1,7 +1,7 @@
 (function () {
 
   var Result = {
-    templateUrl: 'app/components/result-list/result-list.html',
+    templateUrl: 'app/components/result/result.html',
     controller: ResultController,
     bindings: {
       data: "<"
@@ -9,9 +9,18 @@
   };
 
   /** @ngInject */
-  function ResultController() {
+  function ResultController($isRussian) {
     var vm = this;
-    vm.name = vm.data.answer_count;
+    var question_id = vm.data.question_id;
+    var use_id = vm.data.owner.user_id;
+    vm.counter = vm.data.answer_count;
+    vm.name = vm.data.owner.display_name;
+    vm.title = vm.data.title;
+    vm.tags = vm.data.tags;
+
+    $isRussian.get();
+
+    debugger
   }
 
   angular.module('stackOverflowApp')

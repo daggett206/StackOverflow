@@ -1,0 +1,21 @@
+.result-body {
+
+
+  @include adaptive(ipad) {
+    display: table-cell;
+    padding: .6em;
+  }
+
+  &__name {
+    border-bottom: 2px solid darken($action-color, 10%);
+  }
+
+  &__title {
+    padding: .6em 0;
+
+    &:first-letter {
+      text-transform: uppercase;
+    }
+  }
+
+}

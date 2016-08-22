@@ -1,2 +1,10 @@
 .result
-  .result__count {{::$ctrl.name}}
+    .result-counter.counter
+        .counter__container
+            span.counter__number {{::$ctrl.counter}}
+            small.counter__title answers
+    .result-body
+        span.result-body__name(ng-click="$ctrl") {{::$ctrl.name}}
+        p.result-body__title {{::$ctrl.title}}
+        form.result-body__tags(novalidate)
+            so-tag(tags-model="$ctrl.model.tags", name="{{::tag}}", ng-repeat="tag in ::$ctrl.tags track by $index")

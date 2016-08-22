@@ -1,4 +1,5 @@
-(function () {
++
+    (function () {
 
   var ResultList = {
     templateUrl: 'app/components/result-list/result-list.html',
@@ -9,7 +10,8 @@
   };
 
   /** @ngInject */
-  function ResultListController() {}
+  function ResultListController() {
+  }
 
   angular.module('stackOverflowApp')
     .component('soResultList', ResultList);

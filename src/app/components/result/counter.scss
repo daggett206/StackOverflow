@@ -1,0 +1,33 @@
+.counter {
+  float: right;
+
+  @include adaptive(ipad) {
+    position: relative;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    padding: .6em;
+    float: none;
+    width: 80px;
+    cursor: pointer;
+  }
+
+  &__container {
+
+  }
+
+  &__number {
+    padding-right: 5px;
+
+    @include adaptive(ipad) {
+      display: block;
+    }
+  }
+
+  &__title {
+
+    @include adaptive(ipad) {
+      display: block;
+    }
+  }
+}
