@@ -1,5 +1,7 @@
 .questions
   .questions__container.container
-    .questions__error
+    .questions__error(ng-if="questions.empty")
       p.questions__error-text No results.
         a.questions__error-link(ui-sref="home")  Try again.
+    .questions-list(ng-if="!questions.empty")
+      so-result-list(list="questions.questionsList")
