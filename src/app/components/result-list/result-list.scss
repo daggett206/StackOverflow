@@ -3,7 +3,7 @@
   &__item {
     
     &:nth-child(odd) {
-      background: $bg-color;
+      background: lighten($bg-color, 3%);
     }
   }
 }

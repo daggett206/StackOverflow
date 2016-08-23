@@ -9,6 +9,12 @@
     display: inline-block;
     width: 150px;
     height: 40px;
+
+    &:hover,
+    &:active,
+    &:focus {
+      outline: none;
+    }
   }
 
   &__search {

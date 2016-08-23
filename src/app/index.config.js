@@ -7,9 +7,8 @@
 
     /** @ngInject */
     function config($locationProvider) {
-
-        $locationProvider.html5Mode(true);
-
+        //if it is not ie
+        if (!/*@cc_on!@*/0) $locationProvider.html5Mode(true);
     }
 
 })();

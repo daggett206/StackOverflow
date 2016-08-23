@@ -1,27 +1,8 @@
 .tag {
-  display: inline-block;
-  vertical-align: top;
-  margin: .2em .4em .2em 0;
-
-  &__input {
-    display: none;
-  }
-
-  &__label {
-    display: block;
-    background: $tab-color;
-    color: darken($tab-color, 40%);
-    padding:.4em;
-    border-radius: 5px;
-    box-sizing: border-box;
-    min-width: 40px;
-    text-align: center;
-    cursor: pointer;
-
-    .tag__input:checked + & {
-      background: darken($tab-color, 40%);
-      color: white;
-    }
-
-  }
+  display: block;
+  border-radius: 5px;
+  box-sizing: border-box;
+  min-width: 30px;
+  text-align: center;
+  cursor: pointer;
 }

@@ -1,11 +1,11 @@
-+
-    (function () {
+(function () {
+  'use strict';
 
   var ResultList = {
     templateUrl: 'app/components/result-list/result-list.html',
     controller: ResultListController,
     bindings: {
-      list: "<"
+      list: "="
     }
   };
 

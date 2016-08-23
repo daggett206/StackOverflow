@@ -1,9 +1,12 @@
 .search-form {
 
+  max-width: 830px;
+  margin:  0 auto;
+
   &__fieldset {
 
     &--for-tag {
-      text-align: justify;
+      text-align: center;
     }
   }
 }

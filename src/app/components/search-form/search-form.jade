@@ -1,7 +1,10 @@
-form.search-form(name="searchForm", novalidate, ng-submit="$ctrl.submit()")
+form.search-form(name="searchForm", novalidate, ng-submit="$ctrl.submit($event)")
     fieldset.search-form__fieldset
         .search-input
             input.search-input__input(placeholder="Type your question here", ng-model="$ctrl.model.question")
             input.search-input__submit(type="submit", value="Search")
     fieldset.search-form__fieldset.search-form__fieldset--for-tag
-        so-tag(tags-model="$ctrl.model.tags", name="{{::tag.name}}", ng-repeat="tag in ::$ctrl.tags track by $index")
+        .search-tag(ng-repeat="tag in ::$ctrl.tags track by $index")
+            input.search-tag__input(type="checkbox", id="{{::tag.name}}", ng-model="$ctrl.model.tags[tag.name]")
+            label.search-tag__label(for="{{::tag.name}}")
+                so-tag.search-tag__name(name="{{::tag.name}}")

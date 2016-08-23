@@ -1,4 +1,3 @@
 ul.result-list
-  span {{$ctrl.top}}
-  li.result-list__item(ng-repeat="result in $ctrl.list track by $index")
-    so-result(data="result")
+  li.result-list__item(ng-repeat="result in $ctrl.list.all track by $index")
+    so-result(data="result", user-questions="$ctrl.list.user", tags-questions="$ctrl.list.tags")

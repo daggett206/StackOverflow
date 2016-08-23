@@ -1,0 +1,48 @@
+.answer {
+
+  &__title {
+    border-bottom: 2px solid darken($action-color, 10%);
+  }
+
+  &__body {
+    padding: .6em 0;
+
+    & p {
+      padding: .4em 0;
+    }
+    
+    & li code {
+      background: $bg-color;
+      font-family: Consolas,Menlo,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New,monospace,sans-serif;
+      font-size: 13px;
+    }
+
+    & ul {
+      padding-left: 15px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      border: 1px solid $bg-color;
+      margin: 15px 0;
+    }
+
+    & blockquote {
+      background: $bg-color;
+      border-left: 2px solid darken($action-color, 10%);
+      padding-left: 15px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      font-family: Consolas,Menlo,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New,monospace,sans-serif;
+      font-size: 13px;
+      margin: 10px 0;
+    }
+
+    & img {
+      max-width: 100%;
+      height: auto;
+
+      @include adaptive(md) {
+        max-width: 600px;
+      }
+    }
+  }
+}

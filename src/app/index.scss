@@ -10,6 +10,7 @@ $action-color: #0095ff;
 $text-color: #222426;
 $tab-color: #cee0ed;
 $heading-color: #005999;
+$accent-color: #f48024;
 
 $path: '../assets/';
 
@@ -566,6 +567,17 @@ dl, dd, dt {
 
 body {
   font-family: $font;
+}
+
+pre {
+  margin: 1em 0;
+  padding: 10px;
+  width: auto;
+  max-height: 600px;
+  overflow: auto;
+  font-family: Consolas,Menlo,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New,monospace,sans-serif;
+  font-size: 13px;
+  background-color: #eff0f1;
 }
 
 
