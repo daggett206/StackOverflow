@@ -10,7 +10,7 @@
     & p {
       padding: .4em 0;
     }
-    
+
     & li code {
       background: $bg-color;
       font-family: Consolas,Menlo,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New,monospace,sans-serif;
@@ -43,6 +43,11 @@
       @include adaptive(md) {
         max-width: 600px;
       }
+    }
+
+    & a {
+      font-size: 13px;
+      color: $action-color;
     }
   }
 }

@@ -26,7 +26,7 @@
         function getTopTagsQuestions(tag) {
             var site = thisIsRussian ? 'ru.stackoverflow' : 'stackoverflow';
             return $http({
-                url: API.url + 'questions?order=desc&sort=votes&tagged='+ tag +'&site=' + site
+                url: API.url + 'questions?order=desc&site=' + site + '&sort=votes&tagged='+ tag
             });
         }
 
