@@ -10,7 +10,10 @@
   };
 
   /** @ngInject */
-  function ResultListController() {
+  function ResultListController($filter) {
+    var vm = this;
+    vm.orderBy = 'owner.display_name';
+    vm.list.all = $filter('orderBy')(vm.list.all, vm.orderBy, true);
   }
 
   angular.module('stackOverflowApp')

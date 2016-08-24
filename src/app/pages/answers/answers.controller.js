@@ -17,7 +17,7 @@
         }
 
         function checkParams() {
-            if ( $stateParams.question_id === null || $stateParams.question_id === undefined ) {
+            if ( $stateParams.question_id === null || angular.isUndefined($stateParams.question_id) ) {
                 showEmptyTemplate();
                 return;
             }

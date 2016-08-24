@@ -18,11 +18,14 @@
     }
 
     & ul {
-      padding-left: 15px;
       padding-top: 10px;
       padding-bottom: 10px;
-      border: 1px solid $bg-color;
       margin: 15px 0;
+
+      & li {
+        list-style: square;
+        padding-left: 15px;
+      }
     }
 
     & blockquote {
@@ -39,6 +42,7 @@
     & img {
       max-width: 100%;
       height: auto;
+      display: block;
 
       @include adaptive(md) {
         max-width: 600px;

@@ -1,9 +1,19 @@
 .result-list {
 
   &__item {
-    
+    background: white;
+    border: 1px solid white;
+    transition: border .4s ease;
+
     &:nth-child(odd) {
       background: lighten($bg-color, 3%);
+      border-color:  lighten($bg-color, 3%);
     }
+
+    &:hover {
+      border: 1px solid darken($bg-color, 10%);
+      box-sizing: border-box;
+    }
+
   }
 }

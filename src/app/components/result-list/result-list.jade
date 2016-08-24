@@ -1,3 +1,10 @@
-ul.result-list
-  li.result-list__item(ng-repeat="result in $ctrl.list.all track by $index")
-    so-result(data="result", user-questions="$ctrl.list.user", tags-questions="$ctrl.list.tags")
+div
+  select(ng-model="$ctrl.orderBy")
+    option(value="owner.display_name") Names
+    option(value="answer_count") Answers
+  select(ng-model="$ctrl.orderDirection")
+    option(value=true) ASC
+    option(value=false) DESC
+  ul.result-list
+    li.result-list__item(ng-repeat="result in $ctrl.list.all track by $index")
+      so-result(data="result", user-questions="$ctrl.list.user", tags-questions="$ctrl.list.tags")

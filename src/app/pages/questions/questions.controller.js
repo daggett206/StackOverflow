@@ -23,7 +23,7 @@
         }
 
         function checkParams() {
-            if ( $stateParams.question === null || $stateParams.question === undefined ) {
+            if ( $stateParams.question === null || angular.isUndefined($stateParams.question)) {
                 showEmptyTemplate();
                 return;
             }

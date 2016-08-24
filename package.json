@@ -1,5 +1,5 @@
 {
-  "name": "stackOverflow",
+  "name": "stackOverflowApp",
   "version": "0.0.0",
   "dependencies": {
     "angular-sanitize": "^1.5.8",
