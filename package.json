@@ -1,7 +1,8 @@
 {
-  "name": "stackOverflow",
+  "name": "stackOverflowApp",
   "version": "0.0.0",
   "dependencies": {
+    "angular-sanitize": "^1.5.8",
     "gulp-svg-sprites": "^4.0.2"
   },
   "scripts": {

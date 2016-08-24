@@ -1,0 +1,10 @@
+.result {
+  padding: .4em;
+  box-sizing: border-box;
+
+  @include adaptive(ipad) {
+    display: table;
+    width: 100%;
+    padding: 0;
+  }
+}

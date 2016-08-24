@@ -2,7 +2,10 @@
 
   var SearchForm = {
     templateUrl: 'app/components/search-form/search-form.html',
-    controller: SearchFormController
+    controller: SearchFormController,
+    bindings: {
+      isOpen: "=?"
+    }
   };
 
   /** @ngInject */
@@ -29,8 +32,11 @@
           } )
       }
     }
-    function submit() {
+    function submit(e) {
+      e.preventDefault();
       $state.go( 'questions', vm.model);
+      if (vm.isOpen) vm.isOpen = false;
+      return
     }
   }
 

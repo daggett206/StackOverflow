@@ -1,38 +1,41 @@
 (function () {
-  'use strict';
+    'use strict';
 
-  angular
-    .module( 'stackOverflowApp' )
-    .config( routerConfig );
+    angular
+        .module('stackOverflowApp')
+        .config(routerConfig);
 
-  /** @ngInject */
-  function routerConfig( $stateProvider, $urlRouterProvider ) {
-    $stateProvider
-      .state( 'home', {
-        url: '/',
-        templateUrl: 'app/home/home.html',
-        controller: 'HomeController',
-        controllerAs: 'home'
-      } )
-      .state( 'questions', {
-        url: '/questions/:question',
-        params: {
-          tags: null,
-          question: null
-        },
-        templateUrl: 'app/questions/questions.html',
-        controller: 'QuestionsController',
-        controllerAs: 'questions'
-      } )
+    /** @ngInject */
+    function routerConfig($stateProvider, $urlRouterProvider) {
+        $stateProvider
+            .state('home', {
+                url: '/',
+                templateUrl: 'app/pages/home/home.html',
+                controller: 'HomeController',
+                controllerAs: 'home'
+            })
+            .state('questions', {
+                url: '/questions/:question',
+                params: {
+                    tags: null,
+                    question: null
+                },
+                templateUrl: 'app/pages/questions/questions.html',
+                controller: 'QuestionsController',
+                controllerAs: 'questions'
+            })
 
-      .state( 'answers', {
-        url: '/answers',
-        templateUrl: 'app/answers/answers.html',
-        controller: 'AnswersController',
-        controllerAs: 'answers'
-      } );
+            .state('answers', {
+                url: '/answers/:question_id',
+                templateUrl: 'app/pages/answers/answers.html',
+                controller: 'AnswersController',
+                controllerAs: 'answers',
+                params: {
+                    question_id: null
+                }
+            });
 
-    $urlRouterProvider.otherwise( '/' );
-  }
+        $urlRouterProvider.otherwise('/');
+    }
 
 })();

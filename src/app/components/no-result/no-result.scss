@@ -1,0 +1,12 @@
+.no-result {
+
+  &__error-text {
+    font-size: 1.2em;
+    text-align: center;
+    padding-top: 30%;
+  }
+
+  &__error-link {
+    color: $action-color;
+  }
+}

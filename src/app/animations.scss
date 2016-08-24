@@ -21,3 +21,21 @@
   //  }
   //}
 }
+
+.animation-fast-view {
+
+  &.ng-enter,
+  &.ng-leave {
+    transition: right .8s ease-in-out;
+  }
+
+  &.ng-enter,
+  &.ng-leave.ng-leave-active {
+    right: -100%;
+  }
+
+  &.ng-leave,
+  &.ng-enter.ng-enter-active {
+    right: 0;
+  }
+}

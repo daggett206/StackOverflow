@@ -5,4 +5,4 @@
             .search-popup__logo.logo
             span.search-popup__close.icon-cancel(ng-click="$ctrl.isOpen = false")
         .search-popup__content.search-content
-            so-search-form
+            so-search-form(is-open="$ctrl.isOpen")

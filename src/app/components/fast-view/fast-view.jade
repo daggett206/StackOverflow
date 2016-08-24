@@ -1,0 +1,7 @@
+.fast-view
+    .fast-view__overlay(ng-click="$ctrl.closeView()")
+    .fast-view__content
+        span.fast-view__close.icon-cancel(ng-click="$ctrl.closeView()")
+        h3.fast-view__title Quick view for
+            span.fast-view__title-desc(ng-bind-html="$ctrl.results.all.info")
+        so-result-list(list="$ctrl.results")

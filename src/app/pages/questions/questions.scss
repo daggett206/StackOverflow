@@ -1,0 +1,23 @@
+.questions {
+
+  &__container {
+    padding-top: 55px;
+    padding-bottom: 45px;
+    position: relative;
+
+    @include adaptive(ipad) {
+      padding-top: 75px;
+    }
+  }
+
+
+  &__fast-view {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    max-width: 800px;
+    height: 100%;
+    width: 80%;
+  }
+}

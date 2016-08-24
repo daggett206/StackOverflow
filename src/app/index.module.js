@@ -4,6 +4,7 @@
     angular
         .module('stackOverflowApp', [
             'ngAnimate',
+            'ngSanitize',
             'ui.router'
         ]);
 

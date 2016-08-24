@@ -1,0 +1,10 @@
+.answers-list {
+
+  &__item {
+    background: lighten($bg-color, 10%);
+    padding: .6em;
+    margin: 15px 0;
+    border-bottom: 2px solid $accent-color;
+    list-style: decimal;
+  }
+}
