@@ -23,8 +23,12 @@
       margin: 15px 0;
 
       & li {
-        list-style: square;
+        list-style: none;
         padding-left: 15px;
+
+        @include adaptive(ipad) {
+          list-style: square;
+        }
       }
     }
 
@@ -50,8 +54,8 @@
     }
 
     & a {
-      font-size: 13px;
       color: $action-color;
+      word-break: break-all;
     }
   }
 }

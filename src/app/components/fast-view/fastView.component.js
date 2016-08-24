@@ -15,8 +15,11 @@
         vm.results = {};
         vm.closeView = closeView;
 
-        $scope.$watch('$ctrl.list', function (val) {
-            vm.results.all = val.user || val.tags;
+        var unwatch = $scope.$watch('$ctrl.list', function (val) {
+            if (val !== null) {
+                vm.results.all = val.user || val.tags;
+                unwatch();
+            }
         });
 
         function closeView() {

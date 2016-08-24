@@ -61,8 +61,8 @@
       vm.cache.put( key + 's_' + subject, vm[model] );
     }
 
-    function goToAnswers() {
-      $state.go( 'answers', {question_id: question_id} );
+    function goToAnswers(text) {
+      $state.go( 'answers', {text: text, question_id: question_id} );
     }
   }
 

@@ -1,10 +1,10 @@
 .result
     .result-counter.counter
-        .counter__container(ng-click="$ctrl.goToAnswers()")
+        .counter__container(ng-click="$ctrl.goToAnswers($ctrl.data.title)")
             span.counter__number(ng-bind="::$ctrl.data.answer_count")
             small.counter__title answers
     .result-body
         span.result-body__name(ng-click="$ctrl.getUserQuestions()", ng-bind-html="::$ctrl.data.owner.display_name")
-        p.result-body__title(ng-click="$ctrl.goToAnswers()", ng-bind-html="::$ctrl.data.title")
+        p.result-body__title(ng-click="$ctrl.goToAnswers($ctrl.data.title)", ng-bind-html="::$ctrl.data.title")
         .result-body__tags
             so-tag.result-body__tags-item(name="{{::tag}}", ng-click="$ctrl.getTagsQuestions(tag)", ng-repeat="tag in ::$ctrl.data.tags track by $index")

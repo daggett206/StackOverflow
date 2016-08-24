@@ -31,6 +31,7 @@
                 controller: 'AnswersController',
                 controllerAs: 'answers',
                 params: {
+                    text: null,
                     question_id: null
                 }
             });

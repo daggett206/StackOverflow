@@ -3,4 +3,5 @@
         .answers__error(ng-if="answers.empty")
             so-no-result
         .answers__list(ng-if="!answers.empty")
+            .answers__title(ng-bind-html="::answers.text")
             so-answers-list(list="answers.answersList")

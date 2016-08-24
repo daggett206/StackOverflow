@@ -1,0 +1,14 @@
+.sort
+    .sort__wrapper
+        span.sort__title Filter:
+        input.sort__item.sort__search(placeholder="Type to filter questions", ng-model="$ctrl.search", ng-change="$ctrl.event($ctrl.search)")
+        span.sort__icon.icon-search
+
+    span.sort__title Order by:
+    select.sort__item.sort__select(ng-model="$ctrl.sortType")
+        option(value="owner.display_name") Names
+        option(value="answer_count") Answers
+
+    select.sort__item.sort__select(ng-model="$ctrl.sortReverse")
+        option(value='') ASC
+        option(value='true') DESC

@@ -4,4 +4,15 @@
     padding-top: 45px;
     padding-bottom: 55px;
   }
+
+  &__title {
+    text-align: center;
+    font-size: 1.6em;
+    max-width: 500px;
+    margin: 30px auto 0;
+
+    @include adaptive( lg) {
+      max-width: 90%;
+    }
+  }
 }

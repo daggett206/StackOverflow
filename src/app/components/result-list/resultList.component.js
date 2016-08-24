@@ -10,10 +10,25 @@
   };
 
   /** @ngInject */
-  function ResultListController($filter) {
-    var vm = this;
-    vm.orderBy = 'owner.display_name';
-    vm.list.all = $filter('orderBy')(vm.list.all, vm.orderBy, true);
+  function ResultListController($filter, $scope) {
+    var vm           = this;
+    vm.sortType      = 'answer_count';
+    vm.sortReverse   = 'true';
+    vm.updateResults = updateResults;
+
+    var unwatch = $scope.$watch('$ctrl.list.all', function (val) {
+      if (val !== null) {
+        vm.filteredItems = val;
+        unwatch();
+      }
+    });
+
+    function updateResults(search) {
+      var filtered = $filter('filter')(vm.list.all, search);
+      filtered = $filter('orderBy')(filtered, 'title');
+      vm.filteredItems = filtered;
+    }
+
   }
 
   angular.module('stackOverflowApp')

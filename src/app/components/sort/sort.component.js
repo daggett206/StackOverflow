@@ -1,16 +1,19 @@
 (function () {
-  'use strict';
 
-  var Sort = {
-    templateUrl: 'app/components/sort/sort.html',
-    controller: SortController
-  };
+    var Sort = {
+        templateUrl: 'app/components/sort/sort.html',
+        controller: SortController,
+        bindings: {
+            event: "<",
+            sortType: "=",
+            sortReverse: "="
+        }
+    };
 
-  /** @ngInject */
-  function SortController() {
-  }
+    /** @ngInject */
+    function SortController( ) {}
 
-  angular.module('stackOverflowApp')
-    .component('soSort', Sort);
+    angular.module( 'stackOverflowApp' )
+        .component( 'soSort', Sort );
 
 })();

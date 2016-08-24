@@ -2,9 +2,10 @@
 <html ng-app="stackOverflowApp">
 <head>
     <meta charset="utf-8">
-    <title>stackOverflow</title>
+    <title>StackOverflow</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="//cdn.sstatic.net/Sites/stackoverflow/img/favicon.ico?v=4f32ecc8f43d">
     <base href="/">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
@@ -22,11 +23,9 @@
 </head>
 <body>
 
-<div class="main" ng-controller="MainController as main">
-    <so-loader ng-if="loading"></so-loader>
-    <so-header-wrapper></so-header-wrapper>
-    <div ui-view></div>
-</div>
+<so-loader ng-if="loading"></so-loader>
+<so-header-wrapper></so-header-wrapper>
+<div ui-view></div>
 
 <!-- build:js(src) scripts/vendor.js -->
 <!-- bower:js -->

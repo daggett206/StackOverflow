@@ -10,10 +10,5 @@
       border-color:  lighten($bg-color, 3%);
     }
 
-    &:hover {
-      border: 1px solid darken($bg-color, 10%);
-      box-sizing: border-box;
-    }
-
   }
 }

@@ -1,0 +1,83 @@
+.sort {
+  background: #e6e6e7;
+  padding: 0.2em 0.6em 0.8em;
+  box-sizing: border-box;
+
+  @include adaptive(ipad) {
+    padding: .6em .8em;
+  }
+
+  &__title {
+    display: block;
+    margin: 10px 0 5px;
+
+    @include adaptive(ipad) {
+      display: inline-block;
+      padding-right: 5px;
+    }
+  }
+
+  &__item {
+    padding: .4em;
+    box-sizing: border-box;
+
+    @include adaptive(ipad) {
+      margin-right: 10px;
+    }
+  }
+
+  &__search {
+    display: inline-block;
+    width: 90%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+    @include adaptive(ipad) {
+      display: inline-block;
+      width: 200px;
+      margin-right: 0;
+    }
+  }
+
+  &__select {
+    font-size: 15px;
+    width: 48%;
+
+    @include adaptive(ipad) {
+      width: 18%;
+    }
+
+    & + & {
+      margin-left: 2%;
+
+      @include adaptive(ipad) {
+        margin-left: 0;
+      }
+    }
+  }
+
+  &__wrapper {
+    display: inline-block;
+    vertical-align: top;
+    width: 100%;
+
+    @include adaptive(ipad) {
+      width: 290px;
+    }
+  }
+
+  &__icon {
+    display: inline-block;
+    width: 10%;
+    height: 34px;
+    text-align: center;
+    background: #c5c5c6;
+    color: black;
+    line-height: 2.1;
+
+    @include adaptive(ipad) {
+      width: 30px;
+    }
+  }
+}

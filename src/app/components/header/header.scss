@@ -4,6 +4,7 @@
   background: $bg-color;
   position: fixed;
   z-index: 1000;
+  border-bottom: 3px solid white;
 
   &__link {
     display: inline-block;
