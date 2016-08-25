@@ -1,8 +1,8 @@
 .search-box
-    .search-box__overlay(ng-click="$ctrl.isOpen = false")
+    .search-box__overlay(ng-click="$ctrl.event()")
     .search-box__content.search-popup
         header.search-popup__header
             .search-popup__logo.logo
-            span.search-popup__close.icon-cancel(ng-click="$ctrl.isOpen = false")
+            span.search-popup__close.icon-cancel(ng-click="$ctrl.event()")
         .search-popup__content.search-content
-            so-search-form(is-open="$ctrl.isOpen")
+            so-search-form(event="$ctrl.event")

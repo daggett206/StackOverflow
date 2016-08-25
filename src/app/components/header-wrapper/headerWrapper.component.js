@@ -9,6 +9,11 @@
     function HeaderWrapperController() {
         var vm = this;
         vm.isOpen = false;
+        vm.triggerPopup = triggerPopup;
+
+        function triggerPopup() {
+          vm.isOpen = !vm.isOpen;
+        }
     }
 
     angular.module('stackOverflowApp')

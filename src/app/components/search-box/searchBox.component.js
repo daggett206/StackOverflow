@@ -9,7 +9,7 @@
           return $templateCache.get('app/components/search-box/search-box.html')
         }],
         bindings: {
-            isOpen: "="
+            event: "<"
         }
     };
 

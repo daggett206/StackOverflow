@@ -3,13 +3,14 @@
 
     /**
      * This controller almost like AnswersController, bun only for now.
-     * I keep it them as separated for further expandability.
+     * I keep them as separated for further expandability.
      * */
 
     /** @ngInject */
     function QuestionsController($stateParams, $stackData, $cacheFactory) {
         var vm   = this;
         vm.cache = $cacheFactory.get('questionsCache') || $cacheFactory('questionsCache');
+        vm.updateList = updateList;
 
         vm.questionsList = {
             user: null,
@@ -54,6 +55,14 @@
                         }
                     })
             }
+        }
+
+        function updateList( name, value ) {
+          for (var key in vm.questionsList) {
+            if (key == name) {
+              vm.questionsList[key] = value;
+            }
+          }
         }
     }
 

@@ -1,5 +1,6 @@
 div
+    span {{$ctrl.event}}
     so-sort(event="$ctrl.updateResults", sort-type="$ctrl.sortType", sort-reverse="$ctrl.sortReverse")
     ul.result-list
         li.result-list__item( ng-repeat="result in $ctrl.filteredItems | orderBy : $ctrl.sortType :  $ctrl.sortReverse")
-            so-result(data="result", user-questions="$ctrl.list.user", tags-questions="$ctrl.list.tags")
+            so-result(data="result", event="$ctrl.event", set-cache="$ctrl.setCache", get-cache="$ctrl.getFromCache")

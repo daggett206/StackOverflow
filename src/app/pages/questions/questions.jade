@@ -3,6 +3,6 @@
         .questions__error(ng-if="questions.empty")
             so-no-result
         .questions__list(ng-if="!questions.empty")
-            so-result-list(list="questions.questionsList")
+            so-result-list(event="questions.updateList", list="questions.questionsList")
         .questions__fast-view.animation-fast-view(ng-if="questions.questionsList.tags !== null || questions.questionsList.user !== null")
             so-fast-view(list="questions.questionsList")

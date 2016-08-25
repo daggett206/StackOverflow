@@ -6,36 +6,39 @@
     controller: ResultController,
     bindings: {
       data: "<",
-      userQuestions: "=?",
-      tagsQuestions: "=?"
+      event: "<?",
+      setCache: "<?",
+      getCache: "<?"
     }
   };
 
   /** @ngInject */
-  function ResultController( $stackData, $cacheFactory, $state ) {
-    var vm          = this;
+  function ResultController( $stackData, $state ) {
+    var vm = this;
     var question_id = vm.data.question_id;
     var user_id     = vm.data.owner.user_id;
+    vm.goToAnswers  = goToAnswers;
 
-    vm.goToAnswers = goToAnswers;
-    vm.cache       = $cacheFactory.get( 'topQuestions' ) || $cacheFactory( 'topQuestions' );
-
-    activate();
+    vm.$onInit = function () {
+      activate();
+    };
 
     function activate() {
-      if ( angular.isDefined( vm.tagsQuestions ) ) vm.getTagsQuestions = getTagsQuestions;
-      if ( angular.isDefined( vm.userQuestions ) ) vm.getUserQuestions = getUserQuestions;
+      if ( angular.isDefined( vm.event ) ) {
+        vm.getTagsQuestions = getTagsQuestions;
+        vm.getUserQuestions = getUserQuestions;
+      }
     }
 
     function getTagsQuestions( tag ) {
-      if ( vm.cache.get( 'tags_' + tag ) ) {
-        vm.tagsQuestions = vm.cache.get( 'tags_' + tag );
+      if ( vm.getCache( tag ) ) {
+        vm.event('tags', vm.getCache( tag ));
       }
       else {
         $stackData.getTopTagsQuestions( tag )
           .then(
             function ( response ) {
-              setValues( response, 'tagsQuestions', tag, 'tag' );
+              setValues( response, 'tags', tag, 'tag' );
             }
           )
       }
@@ -46,26 +49,27 @@
      * I keep them as separated for further extensibility.
      * */
     function getUserQuestions() {
-      if ( vm.cache.get( 'users_' + vm.data.owner.display_name ) ) {
-        vm.userQuestions = vm.cache.get( 'users_' + vm.data.owner.display_name );
+      if ( vm.getCache( vm.data.owner.display_name ) ) {
+        vm.event('user', vm.getCache( vm.data.owner.display_name ));
       }
       else {
         $stackData.getTopUserQuestions( user_id )
           .then(
             function ( response ) {
-              setValues( response, 'userQuestions', vm.data.owner.display_name, 'user' )
+              setValues( response, 'user', vm.data.owner.display_name, 'user' )
             }
           )
       }
     }
 
     function setValues( response, model, subject, key ) {
-      vm[model]      = response.data.items;
-      vm[model].info = ' ' + key + ' ' + subject;
-      vm.cache.put( key + 's_' + subject, vm[model] );
+      response.data.items.info = ' ' + key + ' ' + subject;
+      vm.event( model, response.data.items );
+      vm.setCache( subject, response.data.items );
+
     }
 
-    function goToAnswers(text) {
+    function goToAnswers( text ) {
       $state.go( 'answers', {text: text, question_id: question_id} );
     }
   }

@@ -3,7 +3,7 @@
   var Header = {
     templateUrl: 'app/components/header/header.html',
     bindings: {
-      isOpen: '='
+      event: '<'
     }
   };
 

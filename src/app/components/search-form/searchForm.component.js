@@ -4,21 +4,24 @@
     templateUrl: 'app/components/search-form/search-form.html',
     controller: SearchFormController,
     bindings: {
-      isOpen: "=?"
+      event: "<?"
     }
   };
 
   /** @ngInject */
   function SearchFormController( $stackData, $cacheFactory, $state ) {
     var vm    = this;
-    vm.cache  = $cacheFactory.get( 'tagsCache' ) || $cacheFactory( 'tagsCache' );
-    vm.model  = {
-      tags: {},
-      question: ''
-    };
-    vm.submit = submit;
+    vm.$onInit = function () {
+      vm.cache  = $cacheFactory.get( 'tagsCache' ) || $cacheFactory( 'tagsCache' );
+      vm.model  = {
+        tags: {},
+        question: ''
+      };
+      vm.submit = submit;
 
-    getAllAvalibleTags();
+      getAllAvalibleTags();
+    };
+
 
     function getAllAvalibleTags() {
       if ( vm.cache.get( 'tags' ) ) {
@@ -36,8 +39,7 @@
     function submit(e) {
       e.preventDefault();
       $state.go( 'questions', vm.model);
-      if (vm.isOpen) vm.isOpen = false;
-      return false;
+      if (vm.event) vm.event();
     }
   }
 

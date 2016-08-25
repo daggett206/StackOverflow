@@ -5,7 +5,7 @@
         templateUrl: 'app/components/fast-view/fast-view.html',
         controller: FastViewController,
         bindings: {
-            list: "="
+            list: "<"
         }
     };
 
