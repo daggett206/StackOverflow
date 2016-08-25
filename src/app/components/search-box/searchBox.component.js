@@ -1,16 +1,17 @@
 (function () {
 
+    /**
+     * Use 'template' against 'templateUrl' for using $templateCache.get() method.
+     * It avoids bug with first animation 'ng-if'
+     * */
     var SearchBox = {
-        templateUrl: 'app/components/search-box/search-box.html',
-        controller: SearchBoxController,
+        template: ['$templateCache', function ( $templateCache ) {
+          return $templateCache.get('app/components/search-box/search-box.html')
+        }],
         bindings: {
             isOpen: "="
         }
     };
-
-    /** @ngInject */
-    function SearchBoxController() {
-    }
 
     angular.module('stackOverflowApp')
         .component('soSearchBox', SearchBox);

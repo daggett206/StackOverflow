@@ -41,6 +41,10 @@
       }
     }
 
+    /**
+     * This function is almost like getTagsQuestions(), but only for now.
+     * I keep them as separated for further extensibility.
+     * */
     function getUserQuestions() {
       if ( vm.cache.get( 'users_' + vm.data.owner.display_name ) ) {
         vm.userQuestions = vm.cache.get( 'users_' + vm.data.owner.display_name );

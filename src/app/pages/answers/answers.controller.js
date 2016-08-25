@@ -1,9 +1,10 @@
 (function () {
     'use strict';
 
-    angular
-        .module('stackOverflowApp')
-        .controller('AnswersController', AnswersController);
+    /**
+     * This controller almost like QuestionsController, bun only for now.
+     * I keep it them as separated for further expandability.
+     * */
 
     /** @ngInject */
     function AnswersController($stateParams, $stackData, $cacheFactory) {
@@ -49,4 +50,8 @@
             vm.text = $stateParams.text;
         }
     }
+
+    angular
+      .module('stackOverflowApp')
+      .controller('AnswersController', AnswersController);
 })();

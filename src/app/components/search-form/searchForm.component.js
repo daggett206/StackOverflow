@@ -32,11 +32,12 @@
           } )
       }
     }
+
     function submit(e) {
       e.preventDefault();
       $state.go( 'questions', vm.model);
       if (vm.isOpen) vm.isOpen = false;
-      return
+      return false;
     }
   }
 

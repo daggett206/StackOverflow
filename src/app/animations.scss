@@ -42,7 +42,7 @@ so-search-box {
 
     &.ng-enter {
 
-      .search-popup {
+      .search-box__content {
         opacity: 0;
         transform: translate(-50%, -100%);
       }
@@ -51,7 +51,7 @@ so-search-box {
 
     &.ng-enter-active {
 
-      .search-popup {
+      .search-box__content {
         opacity: 1;
         transform: translate(-50%, -80%);
       }
@@ -59,7 +59,7 @@ so-search-box {
 
     &.ng-leave {
 
-      .search-popup {
+      .search-box__content {
         opacity: 1;
         transform: translate(-50%, -80%);
       }
@@ -68,7 +68,7 @@ so-search-box {
 
     &.ng-leave-active {
 
-      .search-popup {
+      .search-box__content {
         opacity: 0;
         transform: translate(-50%, -100%);
       }
