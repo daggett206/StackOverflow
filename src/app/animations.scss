@@ -1,0 +1,86 @@
+/* Do not remove the comments below. It's the markers used by wiredep to inject
+   sass dependencies when defined in the bower.json of your dependencies */
+// bower:scss
+// endbower
+
+.animation-fast-view {
+
+  &.ng-enter,
+  &.ng-leave {
+    transition: right .8s ease-in-out;
+  }
+
+  &.ng-enter,
+  &.ng-leave.ng-leave-active {
+    right: -100%;
+  }
+
+  &.ng-leave,
+  &.ng-enter.ng-enter-active {
+    right: 0;
+  }
+}
+
+main {
+  &.ng-enter {
+    transition: all 1s ease;
+    opacity: 0;
+  }
+
+  &.ng-enter-active {
+    opacity: 1;
+  }
+}
+
+so-search-box {
+
+  @include adaptive( ipad) {
+    &.ng-enter,
+    &.ng-leave {
+      transition: .5s;
+    }
+
+    &.ng-enter {
+
+      .search-popup {
+        opacity: 0;
+        transform: translate(-50%, -100%);
+      }
+
+    }
+
+    &.ng-enter-active {
+
+      .search-popup {
+        opacity: 1;
+        transform: translate(-50%, -80%);
+      }
+    }
+
+    &.ng-leave {
+
+      .search-popup {
+        opacity: 1;
+        transform: translate(-50%, -80%);
+      }
+
+    }
+
+    &.ng-leave-active {
+
+      .search-popup {
+        opacity: 0;
+        transform: translate(-50%, -100%);
+      }
+    }
+  }
+
+}
+
+
+
+
+/* Do not remove the comments below. It's the markers used by gulp-inject to inject
+   all your sass files automatically */
+// injector
+// endinjector
